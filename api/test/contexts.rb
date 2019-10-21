@@ -12,9 +12,9 @@ module Contexts
   end
 
   def create_stations
-    @inoodle = FactoryBot.create(:station, name: "iNoodle", longitude: 40.4433813, latitude: 79.9455855, introduction: "iNoodle aaa bbb cccccc ddd")    
-    @underground = FactoryBot.create(:station, name: "Underground", longitude: 40.4433813, latitude: 79.9455855, introduction: "underground aaa bbb cccccc ddd")    
-    @hunt = FactoryBot.create(:station, name: "Hunt", longitude: 40.4433813, latitude: 79.9455855, introduction: "Hunt aaa bbb cccccc ddd")    
+    @inoodle = FactoryBot.create(:station, name: "iNoodle", longitude: 40.4433813, latitude: -79.9455855, introduction: "iNoodle aaa bbb cccccc ddd")    
+    @underground = FactoryBot.create(:station, name: "Underground", longitude: 40.4454289, latitude: -79.9431901, introduction: "underground aaa bbb cccccc ddd")    
+    @hunt = FactoryBot.create(:station, name: "Hunt", longitude: 40.4411172, latitude: -79.943736, introduction: "Hunt aaa bbb cccccc ddd")    
   end
 
   def delete_stations
