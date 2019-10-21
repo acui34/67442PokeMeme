@@ -8,10 +8,10 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/api/log/*
-/api/tmp/*
-!/api/log/.keep
-!/api/tmp/.keep
+api/log/*
+api/tmp/*
+!api/log/.keep
+!api/tmp/.keep
 
 /node_modules
 /yarn-error.log
