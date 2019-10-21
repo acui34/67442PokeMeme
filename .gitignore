@@ -18,3 +18,4 @@ api/tmp/*
 /
 
 .byebug_history
+api/log/development.log
