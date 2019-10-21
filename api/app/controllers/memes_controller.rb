@@ -5,9 +5,18 @@ before_action :set_meme, only: [:show, :update, :destroy]
 
 # GET /memes
 def index
-  @memes = Meme.all
-
-  render json: @memes
+  if params[:station_id]
+    if params[:order_by] == "asc"
+      memes = Meme.sort_by_post_time_asc(params[:station_id])
+    elsif params[:order_by] == "like"
+      memes = Meme.sort_by_total_likes(params[:station_id])
+    else
+      memes = Meme.sort_by_post_time_desc(params[:station_id])
+    end
+    render json: memes, status: :ok
+  else
+    render json: {status: "error", code: 3000, message: "No station id provided"}
+  end
 end
 
 # GET /memes/1
